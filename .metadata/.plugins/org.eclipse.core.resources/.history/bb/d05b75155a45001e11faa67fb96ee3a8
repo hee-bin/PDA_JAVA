@@ -1,0 +1,44 @@
+package Proxy;
+
+public class Printer implements Printable {
+	
+	private String name;
+	
+	public Printer() {
+		heavyjob("Printer 인스턴스 생성 중")
+	}
+	
+	public Printer(String name) {
+		this.name = name;
+		
+	}
+
+	@Override
+	public void setPrinterNmae(String name) {
+		
+	}
+
+	@Override
+	public String getPrinterNamge() {
+		return null;
+	}
+
+	@Override
+	public void print() {
+		
+	}
+	
+	
+	// 무거운 작업이라고 가정
+	private void heavyjob(String msg) {
+		System.out.println(msg);
+		for(int i=0; i<5; i++) {
+			try {
+				Thread.sleep(1000);
+			}catch (InterruptedException e) {
+			}
+		}
+	}
+
+
+}

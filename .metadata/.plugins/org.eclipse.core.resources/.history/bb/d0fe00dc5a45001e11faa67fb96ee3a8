@@ -1,0 +1,17 @@
+package Proxy;
+
+public class PrintProxy implements Printable {
+	private String name;
+	private Printer real;
+	
+	public PrintProxy() {
+		this.name = "no name";
+		this.real = null;
+	}
+	
+	public PrintProxy(String name) {
+		this.name = name;
+		this.real = null;
+	}
+
+}

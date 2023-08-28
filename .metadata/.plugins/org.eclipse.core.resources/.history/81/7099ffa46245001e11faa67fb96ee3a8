@@ -1,0 +1,44 @@
+package Proxy;
+
+public class main {
+
+	public static void main(String[] args) {
+		Printable p = new PrintProxy();
+
+		Printable p1 = new PrintProxy("Alice");
+		
+		System.out.println("The current name is  \"" + p1.getPrinterName() + "\"");
+		p1.setPrinterName("heebin");
+		System.out.println("The current name is  \"" + p1.getPrinterName() + "\"");
+		
+		p.print("hi!");
+		p1.print("welcome!");
+		
+		System.out.println("=================");
+		
+		/**
+		 * 
+		 * Printer p3 = new Printer();
+		p3.getPrinterName();
+		p3.setPrinterName("real printer");
+		p3.getPrinterName();
+		
+		System.out.println("=================");
+		 */
+		
+		
+		Printable p4 = new PrintProxy();
+		p4.getPrinterName();
+		p4.setPrinterName("minsu");
+		p4.getPrinterName();
+		
+		Printable p5 = new PrintProxy("Minsu");
+		p5.getPrinterName();
+		
+
+		
+
+
+	}
+
+}
