@@ -1,0 +1,28 @@
+package Manager;
+
+import java.util.List;
+
+public class Director {
+    private List<Employees> employeeList;
+
+    private Builder builder;
+
+    public Director(Builder builder) {
+        this.builder = builder;
+    }
+
+    public void construct(Employees employee) {
+        String title = employee.getName() + "'s Information";
+        String[] listItems = new String[]{
+            "ID: " + employee.getId(),
+            "Name: " + employee.getName(),
+        };
+        
+        builder.makeTitle(title);
+        builder.makeList(listItems);
+        
+        
+        
+    }
+
+}

@@ -1,0 +1,6 @@
+package FIbonacci;
+
+public abstract class Strategy {
+	public Strategy(int n);
+	abstract void perform(); 
+}

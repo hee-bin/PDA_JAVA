@@ -1,0 +1,31 @@
+package Manager;
+
+public class Director {
+    private Builder builder;
+
+    public Director(Builder builder) {
+        this.builder = builder;
+    }
+
+    public void construct(Employees employee) {
+        builder.setEmployee(employee);
+        builder.makeTitle(employee.getName() + "'s Information");
+        builder.makeList(new String[]{
+            "ID: " + employee.getId(),
+            "Name: " + employee.getName(),
+            "Department: " + employee.getDepartment()
+        });
+        builder.makeDate(); // 현재 날짜를 지정할 수 있는 방법을 적용해야 함
+    }
+
+    public static void main(String[] args) {
+        Builder htmlBuilder = new HTMLBuilder();
+        Director director = new Director(htmlBuilder);
+
+        Employees employee1 = new Employees(1, "John Doe", "HR");
+        Employees employee2 = new Employees(2, "Jane Smith", "Engineering");
+
+        director.construct(employee1);
+        director.construct(employee2);
+    }
+}

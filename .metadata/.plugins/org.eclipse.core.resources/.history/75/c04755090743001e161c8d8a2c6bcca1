@@ -1,0 +1,45 @@
+package Manager;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class main {
+
+	 public static void main(String[] args) {
+	    	EmployManager manager1 = new EmployManager();
+
+	    	manager1.addEmployee(1, "John Doe");
+	    	manager1.addEmployee(2, "Jane Smith");
+
+	        System.out.println("Employee List:");
+	        for (Employees employee : manager1.getEmployeeList()) {
+	            System.out.println("ID: " + employee.getId() + ", Name: " + employee.getName());
+	        }
+
+	        Employees employee1 = new Employees(1, "John Doe");
+	        manager1.removeEmployee(1, "John Doe");
+
+	        System.out.println("Employee List after removal:");
+	        for (Employees employee : manager1.getEmployeeList()) {
+	            System.out.println("ID: " + employee.getId() + ", Name: " + employee.getName());
+	        }
+	        
+	        
+	        System.out.println("===============");
+	        Builder htmlBuilder = new HTMLBuilder();
+	        Director director = new Director(htmlBuilder);
+
+	        Employees employee11 = new Employees(1, "John Doe");
+	        Employees employee2 = new Employees(2, "Jane Smith");
+
+	        director.construct(employee11);
+	        String result1 = htmlBuilder.getResult();
+	        System.out.println("Employee 1 HTML:");
+	        System.out.println(result1);
+
+	        director.construct(employee2);
+	        String result2 = htmlBuilder.getResult();
+	        System.out.println("Employee 2 HTML:");
+	        System.out.println(result2);
+	    }
+}

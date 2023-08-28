@@ -1,0 +1,9 @@
+package Adapter;
+
+import java.nio.channels.AcceptPendingException;
+
+public abstract class Print {
+	public abstract void printWaek();
+	public abstract void pirntStrong();
+
+}

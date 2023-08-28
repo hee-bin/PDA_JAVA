@@ -1,0 +1,15 @@
+package Animal;
+
+/**
+
+  An interface representing the ability to fly.
+  This is an example...
+ * @location New York
+ * @returns blah blah
+ */
+public interface Ifliable {
+/**
+    - Makes the object fly.
+    */
+    void fly();
+    }

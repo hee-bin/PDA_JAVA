@@ -1,0 +1,45 @@
+package Manager;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class main {
+
+	 public static void main(String[] args) {
+	    	EmployManager manager1 = new EmployManager();
+	        Builder htmlBuilder = new HTMLBuilder();
+	        Director director = new Director(htmlBuilder);
+	        
+	        
+	        director.addEmployee(1, "heebin");
+	    	director.addEmployee(2, "jimin");
+
+	        System.out.println("Employee List:");
+	        for (Employees employee : director.getEmployeeList()) {
+	            System.out.println("ID: " + employee.getId() + ", Name: " + employee.getName());
+	        }
+	        
+	        
+	 
+
+
+	        director.removeEmployee(1, "heebin");
+
+	        System.out.println("Employee List after removal:");
+	        for (Employees employee : director.getEmployeeList()) {
+	            System.out.println("ID: " + employee.getId() + ", Name: " + employee.getName());
+	        }
+
+	        
+	       
+	        director.addEmployee(3,  "yeji");
+	        System.out.println(director.getEmployeeList());
+	        
+	        director.construct();
+	        String result = htmlBuilder.getResult();
+	        System.out.println("HTML:");
+	        System.out.println(result);
+	        
+	        
+	    }
+}

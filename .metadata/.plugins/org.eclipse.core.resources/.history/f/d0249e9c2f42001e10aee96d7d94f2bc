@@ -1,0 +1,14 @@
+package Animal;
+
+public class Bird {
+	 String name = "bird";
+	
+	public void introduce() {
+		System.out.println("I'm " + name);
+	}
+	
+	public void fly() {
+		System.out.println("fly ... ");
+	}
+
+}

@@ -1,0 +1,31 @@
+package Manager;
+
+public class Director {
+	
+	public Employees employee;
+
+    public void setEmployees(Employees employee) {
+        this.employee = employee;
+    }
+    
+    
+    private Builder builder;
+
+    public Director(Builder builder) {
+        this.builder = builder;
+    }
+
+    public void construct(Employees employee) {
+        builder.makeTitle(String title);
+        builder.makeList(String[]item) ;
+        builder.makeDate(String currentDate);
+    }
+
+    public static void main(String[] args) {
+        Builder htmlBuilder = new HTMLBuilder();
+        Director director = new Director(htmlBuilder);
+
+        Employee employee = new Employee("John Doe", 123);
+        director.construct(employee);
+    }
+}

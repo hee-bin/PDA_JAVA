@@ -1,0 +1,10 @@
+package Manager;
+
+public class HTMLBuilder extends Builder {
+	private String title;
+	private String[] contentItems;
+	private String currentDate;
+	
+	
+	
+}

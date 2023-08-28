@@ -1,0 +1,46 @@
+package Manager;
+
+import Manager.Employees;
+import java.util.ArrayList;
+import java.util.List;
+
+public class EmployManager {
+    private List<Employees> employeeList;
+
+    public EmployManager() {
+        employeeList = new ArrayList<>();
+    }
+
+    public void addEmployee(int id, String name) {
+        Employees employee = new Employees(id, name);
+        employeeList.add(employee);
+    }
+
+    public void removeEmployee(Employees employee) {
+        employeeList.remove(employee);
+    }
+
+    public List<Employees> getEmployeeList() {
+        return employeeList;
+    }
+
+    public static void main(String[] args) {
+    	EmployManager manager = new EmployManager();
+
+        manager.addEmployee(1, "John Doe");
+        manager.addEmployee(2, "Jane Smith");
+
+        System.out.println("Employee List:");
+        for (Employees employee : manager.getEmployeeList()) {
+            System.out.println("ID: " + employee.getId() + ", Name: " + employee.getName());
+        }
+
+        Employees employee1 = new Employees(1, "John Doe");
+        manager.removeEmployee(employee1);
+
+        System.out.println("Employee List after removal:");
+        for (Employees employee : manager.getEmployeeList()) {
+            System.out.println("ID: " + employee.getId() + ", Name: " + employee.getName());
+        }
+    }
+}

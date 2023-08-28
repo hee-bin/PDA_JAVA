@@ -1,0 +1,10 @@
+package human;
+
+public class Human(int age, String name){
+	this.
+	
+	public void speak() {
+		System.out.println("I am a human...");
+	}
+
+}

@@ -1,0 +1,15 @@
+package human;
+
+public class Student(int age, Stirng name) extends Human {
+	this.age = age;
+	this.name = name;
+	
+	public void speak() {
+		System.out.println("I am a student...");
+	}
+	
+	public void lear() {
+		System.out.println("I am studying javaaaaaaa");
+	}
+
+}

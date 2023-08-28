@@ -1,0 +1,58 @@
+package Manager;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class HTMLBuilder extends Builder {
+    private String title;
+    private String[] contentItems;
+    private String currentDate;
+    StringBuilder sb = new StringBuilder();
+
+    @Override
+    void makeTitle(String title) {
+        this.title = title;
+        sb.append("<html>");
+        sb.append("<head><title>").append(title).append("</title></head>");
+        sb.append("<body>");
+        sb.append("<h1>").append(title).append("</h1>");
+    }
+
+    @Override
+    void makeList(String[] items) {
+        this.contentItems = items;
+        sb.append("<ul>");
+        for (String item : contentItems) {
+        	sb.append("<li>").append(item).append("</li>");
+        }
+        sb.append("</ul>");
+    }
+
+    @Override
+    void makeDate(String currentDate) {
+        this.currentDate = currentDate;
+    }
+
+    public String getResult() {
+        
+       
+        
+        
+        sb.append("<p>Date: ").append(currentDate).append("</p>");
+        sb.append("</body>");
+        sb.append("</html>");
+        return sb.toString();
+    }
+
+    public static void main(String[] args) {
+        HTMLBuilder builder = new HTMLBuilder();
+        builder.setEmployee(new Employees("John Doe", 123));
+        builder.makeTitle("Employee Information");
+        builder.makeList(new String[]{"ID: " + builder.employee.getId(), "Name: " + builder.employee.getName()});
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        builder.makeDate(sdf.format(new Date()));
+
+        String htmlContent = builder.getResult();
+        System.out.println(htmlContent);
+    }
+}

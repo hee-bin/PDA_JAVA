@@ -1,0 +1,47 @@
+package Animal;
+
+abstract class Animal{}
+
+abstract class Bird extends Animal {
+	String name;
+	
+	public void introduc() {
+		System.out.println("i'm a " + name);
+	}
+}
+
+interface fly{
+	void fly();
+}
+
+class Chicken extends Bird implements fly{
+	public Chicken(String name) {
+		this.name = name;
+	}
+	
+	public void fly() {
+		System.out.println("fly not so far");
+	}
+	
+	
+}
+
+class Sparrow extends Bird implements fly{
+	public Sparrow(String name) {
+		this.name = name;
+	}
+	
+	public void fly() {
+		System.out.println("fly  far");
+	}
+}
+
+
+public class main {
+
+	public static void main(String[] args) {
+
+
+	}
+
+}

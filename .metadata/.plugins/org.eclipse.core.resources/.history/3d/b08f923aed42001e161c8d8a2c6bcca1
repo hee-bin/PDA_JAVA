@@ -1,0 +1,20 @@
+package Manager;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class main {
+
+    public static void main(String[] args) {
+        HTMLBuilder builder = new HTMLBuilder();
+        builder.setEmployee(new Employees("John Doe", 123));
+        builder.makeTitle("Employee Information");
+        builder.makeList(new String[]{"ID: " + builder.employee.getId(), "Name: " + builder.employee.getName()});
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        builder.makeDate(sdf.format(new Date()));
+
+        String htmlContent = builder.getResult();
+        System.out.println(htmlContent);
+    }
+
+}

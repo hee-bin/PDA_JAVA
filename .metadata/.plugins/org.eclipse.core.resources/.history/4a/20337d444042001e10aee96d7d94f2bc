@@ -1,0 +1,9 @@
+package Animal;
+
+
+public interface Ifliable {
+/*
+    - Makes the object fly.
+    */
+    void fly();
+    }

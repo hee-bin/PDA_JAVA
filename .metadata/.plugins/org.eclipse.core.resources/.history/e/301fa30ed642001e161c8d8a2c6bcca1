@@ -1,0 +1,11 @@
+package EployeeManager;
+import java.util.*;
+
+public class EmployeeManager {
+	private List<Employee> employees;
+	
+	public EmployeeManager() {
+		employees = new ArrayList<>();
+	}
+	
+}

@@ -1,0 +1,20 @@
+package Manager;
+
+public class HTMLBuilder extends Builder {
+    @Override
+    void makeTitle(String title) {
+        // HTMLBuilder에서의 구체적인 makeTitle 구현
+    }
+
+    @Override
+    void makeList(String[] contentItems) {
+        // HTMLBuilder에서의 구체적인 makeList 구현
+    }
+
+    @Override
+    void makeDate() {
+        // HTMLBuilder에서의 구체적인 makeDate 구현
+    }
+
+    // HTMLBuilder에서 추가적인 메서드나 동작을 구현할 수 있음
+}

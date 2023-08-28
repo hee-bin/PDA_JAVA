@@ -1,0 +1,6 @@
+package FIbonacci;
+
+public interface Strategy {
+	
+
+}

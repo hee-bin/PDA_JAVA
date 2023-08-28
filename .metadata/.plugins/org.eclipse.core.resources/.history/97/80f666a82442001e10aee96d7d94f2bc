@@ -1,0 +1,16 @@
+package human;
+
+public class Human {
+    private int age;
+    private String name;
+    
+    public Human(int age, String name) {
+        super();
+        this.age = age;
+        this.name = name;
+    }
+    
+    public void speak() {
+        System.out.println("I am a human...");
+    }
+}

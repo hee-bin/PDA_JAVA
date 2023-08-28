@@ -1,0 +1,7 @@
+package FIbonacci;
+
+public interface Strategy {
+	
+	int fibonacci(int n);
+
+}

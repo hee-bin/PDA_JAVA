@@ -1,0 +1,14 @@
+package Manager;
+
+
+public abstract class Builder {
+    protected Employees employee;
+
+    public void setEmployee(Employees employee) {
+        this.employee = employee;
+    }
+
+    abstract void makeTitle();
+    abstract void makeList();
+    abstract void makeDate();
+}

@@ -1,0 +1,25 @@
+package Animal;
+
+
+
+
+
+
+
+
+
+
+public class main {
+	public static void main(String[] args) {
+		Bird b1 = new Bird() {};
+		Chicken c1 = new Chicken("chiken");
+		Sparrow s1 = new Sparrow("sparro1");
+		
+		b1.introduc();
+		b1.fly();
+		c1.introduc();
+		c1.fly();
+		s1.introduc();
+		s1.fly();
+	}
+}

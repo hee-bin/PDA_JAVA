@@ -1,0 +1,31 @@
+package Animal;
+
+
+/**
+ * @author hee-bin
+ * @since 2023-08-24
+ * {@link}https://6kkki.tistory.com/1
+- An abstract class representing a bird, implementing Ifliable interface.
+*/
+public abstract class Bird extends Animal implements Ifliable {
+    /**
+    - The name of the bird.
+    */
+    String name = "bird";
+    
+    /**
+    @return print out it's name
+    - Introduces the bird.
+    */
+    public void introduc() {
+    System.out.println("I'm a " + name);
+    }
+    
+    /**
+    
+    - Makes the bird fly.
+    */
+    public void fly() {
+    System.out.println("Fly...");
+    }
+    }

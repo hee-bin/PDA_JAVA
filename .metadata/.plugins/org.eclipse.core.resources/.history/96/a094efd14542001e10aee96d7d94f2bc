@@ -1,0 +1,29 @@
+package Animal;
+
+/**
+ * Javadoc 테스트용 클래스
+ * @author devkuma
+ * @author kimkc
+ */
+public abstract class Bird extends Animal implements Ifliable {
+    /**
+     * The name of the bird.
+     */
+    String name = "bird";
+
+    /**
+     * Introduces the bird.
+     * 
+     * @return The name of the bird.
+     */
+    public void introduc() {
+        System.out.println("I'm a " + name);
+    }
+
+    /**
+     * Makes the bird fly.
+     */
+    public void fly() {
+        System.out.println("Fly...");
+    }
+}

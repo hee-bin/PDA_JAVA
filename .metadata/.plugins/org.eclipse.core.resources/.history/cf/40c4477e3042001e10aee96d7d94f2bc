@@ -1,0 +1,29 @@
+package Animal;
+
+abstract class Animal{}
+
+abstract class Bird extends Animal {
+	String name;
+}
+
+interface fly{
+	void fly();
+}
+
+class Chicken extends Bird{
+	public Chicken(String name) {
+		this.name = name;
+	}
+}
+
+class Sparrow extends Bird{}
+
+
+public class main {
+
+	public static void main(String[] args) {
+
+
+	}
+
+}

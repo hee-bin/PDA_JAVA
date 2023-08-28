@@ -1,0 +1,13 @@
+package Animal;
+
+public class Chicken extends Bird {
+	public Chicken(String name) {
+		this.name = name;
+	}
+	
+	public void fly() {
+		System.out.println("fly not so far");
+	}
+	
+	
+}

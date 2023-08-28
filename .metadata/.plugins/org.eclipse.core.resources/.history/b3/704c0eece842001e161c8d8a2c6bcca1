@@ -1,0 +1,54 @@
+package Manager;
+
+public class HTMLBuilder extends Builder {
+	private String title;
+	private String[] contentItems;
+	private String currentDate;
+	
+	@Override
+	void makeTitle(String title) {
+	    this.title = title;
+	}
+
+	@Override
+	void makeList(String[] contentItems) {
+	    this.contentItems = contentItems;
+	}
+
+	@Override
+	void makeDate() {
+	    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+	    currentDate = sdf.format(new Date());
+	}
+
+	public String getResult() {
+	    StringBuilder html = new StringBuilder();
+	    html.append("<html>");
+	    html.append("<head><title>").append(title).append("</title></head>");
+	    html.append("<body>");
+	    html.append("<h1>").append(title).append("</h1>");
+	    html.append("<ul>");
+	    for (String item : contentItems) {
+	        html.append("<li>").append(item).append("</li>");
+	    }
+	    html.append("</ul>");
+	    html.append("<p>Date: ").append(currentDate).append("</p>");
+	    html.append("</body>");
+	    html.append("</html>");
+	    return html.toString();
+	}
+
+	public static void main(String[] args) {
+	    HTMLFileBuilder builder = new HTMLFileBuilder();
+	    builder.makeTitle("Sample HTML Builder");
+	    builder.makeList(new String[]{"Item 1", "Item 2", "Item 3"});
+	    builder.makeDate();
+
+	    String htmlContent = builder.getResult();
+	    System.out.println(htmlContent);
+	}
+
+	
+	
+	
+}

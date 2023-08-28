@@ -1,0 +1,21 @@
+package Manager;
+
+public class Director {
+    private Builder builder;
+
+    public Director(Builder builder) {
+        this.builder = builder;
+    }
+
+    public void construct(Employees employee) {
+        String title = employee.getName() + "'s Information";
+        String[] listItems = new String[]{
+            "ID: " + employee.getId(),
+            "Name: " + employee.getName(),
+        };
+        
+        builder.makeTitle(title);
+        builder.makeList(listItems);
+    }
+
+}

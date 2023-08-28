@@ -1,0 +1,19 @@
+package Template;
+
+public class StringDisplay {
+	private String string;
+	private int width;
+	
+	public StringDisplay(String string) {
+		this.string = string;
+		this.width = string.length();
+	}
+	
+	private void printLine() {
+		fpr 
+	}
+	
+	public void open() {
+		printLine();
+	}
+}

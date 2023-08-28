@@ -1,0 +1,16 @@
+package Animal;
+
+
+public abstract class Bird extends Animal implements Ifliable {
+	String name = "bird";
+	
+	public void introduc() {
+		System.out.println("i'm a " + name);
+	}
+	
+	public void fly() {
+		System.out.println("fly ...");
+	}
+	
+	
+}

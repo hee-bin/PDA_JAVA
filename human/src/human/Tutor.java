@@ -1,0 +1,9 @@
+package human;
+
+public class Tutor extends Human{	
+	
+	public void teach() {
+		System.out.println("i'm teaching someone for money");
+	}
+
+}

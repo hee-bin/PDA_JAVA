@@ -1,0 +1,58 @@
+package Animal;
+
+abstract class Animal{
+	
+}
+
+abstract class Bird extends Animal implements Ifliable {
+	String name = "bird";
+	
+	public void introduc() {
+		System.out.println("i'm a " + name);
+	}
+	
+	public void fly() {
+		System.out.println("fly ...");
+	}
+	
+	
+}
+
+
+class Chicken extends Bird {
+	public Chicken(String name) {
+		this.name = name;
+	}
+	
+	public void fly() {
+		System.out.println("fly not so far");
+	}
+	
+	
+}
+
+class Sparrow extends Bird {
+	public Sparrow(String name) {
+		this.name = name;
+	}
+	
+	public void fly() {
+		System.out.println("fly  far");
+	}
+}
+
+
+public class main {
+	public static void main(String[] args) {
+		Bird b1 = new Bird() {};
+		Chicken c1 = new Chicken("chiken");
+		Sparrow s1 = new Sparrow("sparro1");
+		
+		b1.introduc();
+		b1.fly();
+		c1.introduc();
+		c1.fly();
+		s1.introduc();
+		s1.fly();
+	}
+}

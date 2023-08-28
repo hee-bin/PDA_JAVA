@@ -1,0 +1,27 @@
+package Manager;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class main {
+
+	 public static void main(String[] args) {
+	    	EmployManager manager = new EmployManager();
+
+	        manager.addEmployee(1, "John Doe");
+	        manager.addEmployee(2, "Jane Smith");
+
+	        System.out.println("Employee List:");
+	        for (Employees employee : manager.getEmployeeList()) {
+	            System.out.println("ID: " + employee.getId() + ", Name: " + employee.getName());
+	        }
+
+	        Employees employee1 = new Employees(1, "John Doe");
+	        manager.removeEmployee(1, "John Doe");
+
+	        System.out.println("Employee List after removal:");
+	        for (Employees employee : manager.getEmployeeList()) {
+	            System.out.println("ID: " + employee.getId() + ", Name: " + employee.getName());
+	        }
+	    }
+}

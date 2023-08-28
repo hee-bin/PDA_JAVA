@@ -1,0 +1,5 @@
+package FIbonacci;
+
+public abstract class Strategy {
+	
+}

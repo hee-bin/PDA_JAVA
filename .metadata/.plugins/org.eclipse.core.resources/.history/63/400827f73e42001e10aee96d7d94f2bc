@@ -1,0 +1,24 @@
+package Animal;
+
+/**
+
+- A class demonstrating the Bird hierarchy and their flying abilities.
+*/
+public class Main {
+public static void main(String[] args) {
+Bird b1 = new Bird() {};
+Chicken c1 = new Chicken("chicken");
+Sparrow s1 = new Sparrow("sparrow1");
+    
+    ```
+     b1.introduc();
+     b1.fly();
+     c1.introduc();
+     c1.fly();
+     s1.introduc();
+     s1.fly();
+    
+    ```
+    
+    }
+    }

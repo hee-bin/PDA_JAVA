@@ -1,0 +1,23 @@
+package Manager;
+
+public class Director {
+    private Builder builder;
+
+    public Director(Builder builder) {
+        this.builder = builder;
+    }
+
+    public void construct(Employees employee) {
+        String title = employee.getName() + "'s Information";
+        String[] listItems = new String[]{
+            "ID: " + employee.getId(),
+            "Name: " + employee.getName(),
+            "Department: " + employee.getDepartment()
+        };
+        
+        builder.makeTitle(title);
+        builder.makeList(listItems);
+        builder.makeDate(); // 현재 날짜를 지정할 수 있는 방법을 적용해야 함
+    }
+
+}

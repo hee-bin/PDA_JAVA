@@ -1,0 +1,38 @@
+package Manager;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class EmployManager {
+    private List<Employees> employeeList;
+
+    public EmployManager() {
+        employeeList = new ArrayList<>();
+    }
+
+    public void addEmployee(int id, String name) {
+        Employees employee = new Employees(id, name);
+        employeeList.add(employee);
+    }
+
+    public void removeEmployee(int id, String name) {
+        Employees employeeToRemove = null;
+        for (Employees employee : employeeList) {
+            if (employee.getId() == id) {
+                employeeToRemove = employee;
+                break;
+            }
+        }
+        if (employeeToRemove != null) {
+            employeeList.remove(employeeToRemove);
+            System.out.printf("직원 %s($d) 가 해고당했습니다. ", name, id );
+        }
+    }
+    
+    
+    public List<Employees> getEmployeeList() {
+        return employeeList;
+    }
+
+   
+}

@@ -1,0 +1,37 @@
+package FIbonacci;
+
+public class memo {
+	static int[] fib = new int[100];
+
+	 private int[] memoizationFibonacci(int n) {
+	        int[] fibArray = new int[n + 1];
+	        Arrays.fill(fibArray, -1);
+
+	        for (int i = 0; i <= n; i++) {
+	            fibArray[i] = memoizationFib(i, fibArray);
+	        }
+
+	        return fibArray;
+	    }
+
+	    private int memoizationFib(int n, int[] fibArray) {
+	        if (fibArray[n] != -1) {
+	            return fibArray[n];
+	        }
+	        if (n <= 1) {
+	            return n;
+	        }
+	        fibArray[n] = memoizationFib(n - 1, fibArray) + memoizationFib(n - 2, fibArray);
+	        return fibArray[n];
+	    }
+    
+    
+    
+    public void perform(int n) {
+		System.out.println("THIS IS MEMO");
+
+		memoizationFibonacci(n);
+	}
+
+
+}

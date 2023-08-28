@@ -1,0 +1,9 @@
+package human;
+
+public class main {
+
+	public static void main(String[] args) {
+		Human human1 = new Human();
+		human1.speak();
+	}
+}

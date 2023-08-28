@@ -1,0 +1,24 @@
+package Manager;
+
+public class HTMLBuilder extends Builder {
+
+
+    @Override
+    void makeDate() {
+        // HTMLBuilder에서의 구체적인 makeDate 구현
+    }
+
+	@Override
+	void makeTitle() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	void makeList() {
+		// TODO Auto-generated method stub
+		
+	}
+
+    // HTMLBuilder에서 추가적인 메서드나 동작을 구현할 수 있음
+}

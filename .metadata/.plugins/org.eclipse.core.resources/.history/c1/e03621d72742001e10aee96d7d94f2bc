@@ -1,0 +1,10 @@
+package Animal;
+
+public class Chicken extends Bird {
+	
+	 public Chicken(String name) {
+		 this.name = name;
+	 }
+	
+
+}

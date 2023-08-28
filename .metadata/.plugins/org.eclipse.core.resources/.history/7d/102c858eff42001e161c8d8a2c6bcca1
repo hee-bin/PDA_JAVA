@@ -1,0 +1,12 @@
+package Manager;
+
+
+public abstract class Builder {
+
+
+
+    abstract void makeTitle(String title);
+    abstract void makeList(String[] items);
+    abstract void makeDate(String currentDate);
+    
+}
