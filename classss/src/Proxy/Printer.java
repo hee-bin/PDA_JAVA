@@ -1,5 +1,9 @@
 package Proxy;
 
+/**
+ * 프린터 본인을 나타내는 클래스입니다.
+ */
+
 public class Printer implements Printable {
 	
 	private String name;
