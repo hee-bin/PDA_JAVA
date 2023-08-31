@@ -2,7 +2,6 @@
 
 public interface State {
 	// 시간 설정
-	public abstract void doClock(Context context, int hour);
 	
 	// 금고 사용
 	public abstract void doUse(Context context);
